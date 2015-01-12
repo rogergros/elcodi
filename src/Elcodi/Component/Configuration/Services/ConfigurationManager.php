@@ -129,7 +129,7 @@ class ConfigurationManager extends AbstractCacheWrapper
          * The value is cached, so we can securely return its value
          */
         if (false !== $valueIsCached) {
-            return $valueIsCached = $this
+            return $this
                 ->cache
                 ->fetch($parameterIdentifier);
         }

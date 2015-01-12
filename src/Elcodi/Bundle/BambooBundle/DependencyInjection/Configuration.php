@@ -45,6 +45,13 @@ class Configuration extends AbstractConfiguration
                 ->scalarNode('store_template')
                     ->defaultValue('ElcodiTemplateBundle')
                 ->end()
+                ->arrayNode('store_templates')
+                    ->prototype('scalar')
+                        ->defaultValue([
+                            'ElcodiTemplateBundle'
+                        ])
+                    ->end()
+                ->end()
                 ->arrayNode('emails')
                     ->addDefaultsIfNotSet()
                     ->children()
